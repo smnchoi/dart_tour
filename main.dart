@@ -26,4 +26,8 @@ void main() {
   // if (giveMeFive) {
   // numbers.add(5);
   // }
+
+
+  // String interpolation
+  String greeting = "Hello I'm $name and I was born in ${2024 - age}."; // THIS IS REALLY STRAIGHTFORWARD.
 }
