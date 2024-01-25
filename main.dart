@@ -30,4 +30,11 @@ void main() { // Dart goes for main automatically. Always have main.
   final String surname = "choi";
   // surname = "kim"; // Impossible. The final variable 'surname' can only be set once.
   // final is equivalent to const in JS.
+
+
+  late final String color;
+  // print(color); // Impossible. Because color is null at this point and Dart has null-safety.
+  // DO SOMETHING API CALL
+  color = "just-a-color-value-from-the-response";
+  // color = "another-one?"; // Impossible. Because color is final.
 }
