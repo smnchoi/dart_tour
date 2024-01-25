@@ -37,4 +37,6 @@ void main() { // Dart goes for main automatically. Always have main.
   // DO SOMETHING API CALL
   color = "just-a-color-value-from-the-response";
   // color = "another-one?"; // Impossible. Because color is final.
+
+  const api_pulling_freqeuncy = 30; // A variable that I know before compiling. `const` keyword creates a value that is a compile-time constant.
 }
