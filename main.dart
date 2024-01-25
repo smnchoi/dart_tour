@@ -43,6 +43,29 @@ void main() {
     "Saturn",
     "Neptune",
     "Uranus",
-    for (String planet in innerPlanets) "$planet", // ⬅️ This is "collection for"
+    for (String planet in innerPlanets)
+      "$planet", // ⬅️ This is "collection for"
   ];
+
+  // Dart will guess type for earth.
+  // and it will be a Map<String, Object> - Object type is just similar to "any" in TS.
+  // Map<KEY,VALUE>
+  var earth = {
+    "distance": "1AU",
+    "nth-planet": 3,
+    "hasMoon": true,
+  };
+
+  // Set<KEY,VALUE>
+  // Set is defined with curly brackets.
+  var naturalNumber = {
+    1,
+    2,
+    3,
+    4,
+    5,
+  };
+  naturalNumber.add(2);
+  // naturalNumber will not be modified. Because it is Set.
+  // Set can only have unique value.
 }
