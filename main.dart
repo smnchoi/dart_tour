@@ -10,4 +10,19 @@ void main() { // Dart goes for main automatically. Always have main.
   if (d_name2 is String) {
     // d_name2.codeUnitAt(index)
   }
+
+
+
+  // String nico = "nico"; 
+  // nico = null; // Impossible
+
+  String? nico = "nico"; // following `;` make the variable nullable.
+  nico = null; // possible.
+
+
+  String? soomin = "soomin"; // by default all variables are NON-nullable. must use `?` to make it nullable.
+  // if (soomin != null) {
+  //   soomin.isNotEmpty;
+  // }
+  soomin?.isNotEmpty; // same meaning as above.
 }
