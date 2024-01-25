@@ -14,7 +14,7 @@ void main() { // Dart goes for main automatically. Always have main.
 
 
   // String nico = "nico"; 
-  // nico = null; // Impossible
+  // nico = null; // Impossible.
 
   String? nico = "nico"; // following `;` make the variable nullable.
   nico = null; // possible.
@@ -25,4 +25,9 @@ void main() { // Dart goes for main automatically. Always have main.
   //   soomin.isNotEmpty;
   // }
   soomin?.isNotEmpty; // same meaning as above.
+
+
+  final String surname = "choi";
+  // surname = "kim"; // Impossible. The final variable 'surname' can only be set once.
+  // final is equivalent to const in JS.
 }
