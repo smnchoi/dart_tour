@@ -109,3 +109,23 @@ String sayHelloWithOptionalPositional(String name, int age,
     [String? country = "UN"]) {
   return "Hello I'm $name, $age years old, from $country";
 }
+
+// Think about this.
+String capitalizerAcceptNullable(String? name) {
+  if (name != null) {
+    return name.toUpperCase();
+  } else {
+    return "NULL_STRING";
+  }
+}
+
+// `capitalizerAcceptNullable` can be shorter by using `??` the QQ operator.
+String capitalizerAcceptNullable2(String? name) =>
+    // If LEFT is a null, then RIGHT will be returned.
+    name?.toUpperCase() ?? "NULL_STRING";
+
+// Also, good to know: nullish assignment `??=`
+String nullishAssignment(String? target) {
+  target ??= "YEAH THIS IS A NULL"; // ASSIGN IF THE TARGET IS A NULL.
+  return target;
+}
