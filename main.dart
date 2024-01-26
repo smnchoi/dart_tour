@@ -73,6 +73,8 @@ void main() {
   sayHello(name: "Mark", country: "NZ");
 
   sayHelloWithRequired(name: "Conan", age: 52, country: "Ireland");
+
+  sayHelloWithOptionalPositional("Ban", 72);
 }
 
 // Function should explicitly show type of return.
@@ -99,5 +101,11 @@ String sayHelloWithRequired({
   required int age,
   required String country,
 }) {
+  return "Hello I'm $name, $age years old, from $country";
+}
+
+// This squared bracket and `?` make the positional argument a optional value.
+String sayHelloWithOptionalPositional(String name, int age,
+    [String? country = "UN"]) {
   return "Hello I'm $name, $age years old, from $country";
 }
