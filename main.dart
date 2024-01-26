@@ -69,3 +69,12 @@ void main() {
   // naturalNumber will not be modified. Because it is Set.
   // Set can only have unique value.
 }
+
+// Function should explicitly show type of return.
+// Function can be placed outside of `main` function.
+num add(num a, num b) {
+  return a + b;
+}
+
+// Fat arrow syntax
+num add2(num a, num b) => a + b;
