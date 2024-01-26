@@ -68,6 +68,11 @@ void main() {
   naturalNumber.add(2);
   // naturalNumber will not be modified. Because it is Set.
   // Set can only have unique value.
+
+  // Remember that no curly brackets when "CALL" the function that has named arguments.
+  sayHello(name: "Mark", country: "NZ");
+
+  sayHelloWithRequired(name: "Conan", age: 52, country: "Ireland");
 }
 
 // Function should explicitly show type of return.
@@ -78,3 +83,21 @@ num add(num a, num b) {
 
 // Fat arrow syntax
 num add2(num a, num b) => a + b;
+
+// Named Arguments by wrapping curly brackets
+String sayHello({
+  String name = "UNNAMED", // Default value to resolve null-safety errors.
+  int age = 20,
+  String country = "KOREA",
+}) {
+  return "Hello I'm $name, $age years old, from $country";
+}
+
+// Use required keyword to not to use default values.
+String sayHelloWithRequired({
+  required String name, // Use required keyword to force to input all arguments.
+  required int age,
+  required String country,
+}) {
+  return "Hello I'm $name, $age years old, from $country";
+}
