@@ -31,7 +31,7 @@ class Player {
     required int hp,
   })  : name = name, //! THE `:` IS USED TO INITIALIZE PROPERTIES.
         hp = hp,
-        team = "Red",
+        team = "RED",
         cash = 0 / 0;
 
   void sayHello() {
@@ -53,6 +53,18 @@ void main() {
     hp: 200,
     team: "BLUE",
   );
-  print(player1);
-  print(player2);
+
+  // Cascade Notation
+  player2
+    ?..cash =
+        1000 // For nullable property, use `?..` and it should be placed in the first
+    ..name = "dsa"
+    ..hp = 50
+    ..team = "RED";
+
+  // //! THIS IS EQUIVALENT TO THE ABOVE
+  // player2?.cash = 1000;
+  // player2..name = "dsa";
+  // player2..hp = 50;
+  // player2..team = "RED";
 }
