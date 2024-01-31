@@ -56,7 +56,7 @@ void main() {
     "hasMoon": true,
   };
 
-  // Set<KEY,VALUE>
+  // Set<VALUE>
   // Set is defined with curly brackets.
   var naturalNumber = {
     1,
@@ -129,3 +129,22 @@ String nullishAssignment(String? target) {
   target ??= "YEAH THIS IS A NULL"; // ASSIGN IF THE TARGET IS A NULL.
   return target;
 }
+
+// typedef to create an alias for a type.
+// This is recommended for simple type aliases.
+typedef ListOfInts = List<int>;
+
+ListOfInts reverseIntegerList(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+// Do NOT use it like this.
+// It worked but not recommended. 
+// Use Class to type alias for structured data.
+typedef UserInfo = Map<String, String>;
+
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
+// sayHi({"name": "Bruce"});
