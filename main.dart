@@ -15,7 +15,7 @@ class Player {
   // //! Constructor can be shorted like this because Dart will know the type based on properties.
   // Player(this.name, this.hp);
 
-  // Use Named Constructor Parameters
+  // Use "Named Constructor Parameters"
   // Flutter uses this way really much.
   Player({
     required this.name,
@@ -23,6 +23,16 @@ class Player {
     required this.team,
     this.cash = 0.0,
   });
+
+  // Use "Named Constructor"
+  // Flutter uses this way really much.
+  Player.createRedPlayer({
+    required String name,
+    required int hp,
+  })  : name = name, //! THE `:` IS USED TO INITIALIZE PROPERTIES.
+        hp = hp,
+        team = "Red",
+        cash = 0 / 0;
 
   void sayHello() {
     // We don't have to use "this" inside the method.
@@ -34,11 +44,9 @@ class Player {
 
 // Dart goes for main automatically. Always have main.
 void main() {
-  var player1 = Player(
+  var player1 = Player.createRedPlayer(
     name: "Ted",
     hp: 100,
-    team: "RED",
-    cash: 1000,
   );
   var player2 = Player(
     name: "Jane",
